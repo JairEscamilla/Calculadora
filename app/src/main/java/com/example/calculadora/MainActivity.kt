@@ -40,9 +40,18 @@ class MainActivity : AppCompatActivity() {
 
     fun addOperation(button: View) {
         val operation = (button as Button).text.toString()
+        var newDisplayValue = ""
+        val result = calculator.getResult()
+        if(calculator.getOperation() != ""){
+            calculator.setFirstNumber(result)
+            calculator.setSecondNumber(0.0)
+            newDisplayValue = "${calculator.getFirstNumber()}$operation"
+        }else {
+            newDisplayValue = operationDisplay.text.toString() + operation
+        }
         calculator.setOperation(operation)
-        val newDisplayValue = operationDisplay.text.toString() + operation
         operationDisplay.text = newDisplayValue
+        resultDisplay.text = result.toString()
     }
     @Suppress("UNUSED_PARAMETER")
     fun getResult(button: View) {
