@@ -1,7 +1,6 @@
 package com.example.calculadora
 
 import android.os.Bundle
-import android.util.Log
 import android.view.View
 import android.widget.Button
 import android.widget.TextView
@@ -26,11 +25,12 @@ class MainActivity : AppCompatActivity() {
         val newDisplayValue = displayValue + number
         operationDisplay.text = newDisplayValue
         try {
-
             if (calculator.getOperation() == "") {
                 calculator.setFirstNumber(newDisplayValue.toDouble())
+                resultDisplay.text = newDisplayValue
             }else {
                 val splittedDisplay = newDisplayValue.split(calculator.getOperation()).toTypedArray()
+                resultDisplay.text = splittedDisplay[1]
                 calculator.setSecondNumber(splittedDisplay[1].toDouble())
             }
         } catch (e: Exception) {
@@ -40,14 +40,12 @@ class MainActivity : AppCompatActivity() {
 
     fun addOperation(button: View) {
         val operation = (button as Button).text.toString()
-        var newDisplayValue = ""
+        var newDisplayValue = operationDisplay.text.toString() + operation
         val result = calculator.getResult()
         if(calculator.getOperation() != ""){
             calculator.setFirstNumber(result)
             calculator.setSecondNumber(0.0)
             newDisplayValue = "${calculator.getFirstNumber()}$operation"
-        }else {
-            newDisplayValue = operationDisplay.text.toString() + operation
         }
         calculator.setOperation(operation)
         operationDisplay.text = newDisplayValue
@@ -57,5 +55,16 @@ class MainActivity : AppCompatActivity() {
     fun getResult(button: View) {
         val result = calculator.getResult()
         resultDisplay.text = result.toString()
+    }
+    @Suppress("UNUSED_PARAMETER")
+    fun changeSign(button: View) {
+        val newNumber = (resultDisplay.text.toString().toDouble() * -1).toString()
+        val splittedDisplay = operationDisplay.text.split(calculator.getOperation()).toTypedArray()
+        if(calculator.getOperation()  == ""){
+            operationDisplay.text = newNumber
+        }else{
+            operationDisplay.text = "${splittedDisplay[0]}${calculator.getOperation()}$newNumber"
+        }
+        resultDisplay.text = newNumber
     }
 }

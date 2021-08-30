@@ -181,6 +181,7 @@
         android:backgroundTint="#34509E"
         android:backgroundTintMode="add"
         android:fontFamily="monospace"
+        android:onClick="changeSign"
         android:paddingStart="20dp"
         android:paddingTop="7dp"
         android:paddingEnd="20dp"
