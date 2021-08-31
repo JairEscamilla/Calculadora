@@ -20,4 +20,7 @@
     <string name="sin">sin</string>
     <string name="cos">cos</string>
     <string name="sqrt">sqrt</string>
+    <string name="inverse">1/x</string>
+    <string name="Tpow">10^x</string>
+    <string name="pow">x^n</string>
 </resources>

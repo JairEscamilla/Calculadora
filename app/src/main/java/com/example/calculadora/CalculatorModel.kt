@@ -40,6 +40,7 @@ class CalculatorModel {
             "-" -> result = firstNumber - secondNumber
             "x" -> result = firstNumber * secondNumber
             "÷" -> result = firstNumber / secondNumber
+            "x^n" -> result = Math.pow(firstNumber, secondNumber)
         }
     }
     fun getResult(): Double {
@@ -68,5 +69,12 @@ class CalculatorModel {
 
     fun calculateSqrt(number: Double): Double {
         return Math.sqrt(number)
+    }
+
+    fun calculateInverse(number: Double): Double {
+        return 1 / number
+    }
+    fun calculateTPow(number: Double): Double {
+        return Math.pow(10.0, number)
     }
 }

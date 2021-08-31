@@ -91,4 +91,16 @@ class MainActivity : AppCompatActivity() {
         val result = calculator.calculateSqrt(number)
         resultDisplay.text = "$result"
     }
+    @Suppress("UNUSED_PARAMETER")
+    fun calcInverse(button: View){
+        val number = resultDisplay.text.toString().toDouble()
+        val result = calculator.calculateInverse(number)
+        resultDisplay.text = "$result"
+    }
+    @Suppress("UNUSED_PARAMETER")
+    fun calcTPow(button: View){
+        val number = resultDisplay.text.toString().toDouble()
+        val result = calculator.calculateTPow(number)
+        resultDisplay.text = "$result"
+    }
 }
