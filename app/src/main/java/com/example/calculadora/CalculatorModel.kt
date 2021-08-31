@@ -1,12 +1,15 @@
 package com.example.calculadora
 
+import android.util.Log
 import java.lang.Exception
+import java.lang.Math.cos
+import java.lang.Math.sin
 
 class CalculatorModel {
     private var firstNumber = 0.0
     private var secondNumber = 0.0
     private var operation = ""
-    private var result = 0.0;
+    private var result = 0.0
 
     fun setFirstNumber(number: Double) {
         firstNumber = number
@@ -53,5 +56,17 @@ class CalculatorModel {
         firstNumber = 0.0
         secondNumber = 0.0
         operation = ""
+    }
+
+    fun calculateSin(number: Double): Double {
+        return sin(number)
+    }
+
+    fun calculateCos(number: Double): Double {
+        return cos(number)
+    }
+
+    fun calculateSqrt(number: Double): Double {
+        return Math.sqrt(number)
     }
 }

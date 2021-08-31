@@ -17,4 +17,7 @@
     <string name="multiplication">x</string>
     <string name="division">÷</string>
     <string name="plus_minus">+/-</string>
+    <string name="sin">sin</string>
+    <string name="cos">cos</string>
+    <string name="sqrt">sqrt</string>
 </resources>
