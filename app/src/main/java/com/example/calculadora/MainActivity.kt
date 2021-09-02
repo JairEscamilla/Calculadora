@@ -113,6 +113,30 @@ class MainActivity : AppCompatActivity() {
         memDisplay.text = "$number"
     }
 
+    @Suppress("UNUSED_PARAMETER")
+    fun recall(button: View) {
+        try {
+            var memory = calculator.getMemory()
+            val splittedDisplay = resultDisplay.text.
+            toString().split(calculator.getOperation()).toTypedArray()
+
+            calculator.setSecondNumber(memory)
+            if(splittedDisplay[0].toDouble() === 0.0){
+                operationDisplay.text = "${memory}${calculator.getOperation()}$memory"
+                calculator.setFirstNumber(memory)
+                calculator.setSecondNumber(memory)
+            }else{
+                operationDisplay.text = "${splittedDisplay[0]}${calculator.getOperation()}$memory"
+                calculator.setFirstNumber(splittedDisplay[0].toString().toDouble())
+                calculator.setSecondNumber(memory)
+            }
+            resultDisplay.text = "$memory"
+        }catch (error: Exception){
+
+        }
+
+    }
+
     override fun onStart() {
         super.onStart()
         //resultDisplay.text = calculadoraViewModel.resultado

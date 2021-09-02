@@ -82,4 +82,8 @@ class CalculatorModel {
     fun setMemory(number: Double) {
         memory = number
     }
+
+    fun getMemory(): Double {
+        return memory
+    }
 }
