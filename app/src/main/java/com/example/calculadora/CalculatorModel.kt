@@ -99,4 +99,11 @@ class CalculatorModel {
     fun resetMemory() {
         memory = 0.0
     }
+    fun resetCalculator() {
+        firstNumber = 0.0
+        secondNumber = 0.0
+        operation = ""
+        result = 0.0
+        memory = 0.0
+    }
 }

@@ -155,6 +155,14 @@ class MainActivity : AppCompatActivity() {
         calculator.resetMemory()
         memDisplay.text = "0.0"
     }
+
+    @Suppress("UNUSED_PARAMETER")
+    fun clear(button: View) {
+        calculator.resetCalculator()
+        memDisplay.text = "0.0"
+        operationDisplay.text = ""
+        resultDisplay.text = "0.0"
+    }
     override fun onStart() {
         super.onStart()
         //resultDisplay.text = calculadoraViewModel.resultado

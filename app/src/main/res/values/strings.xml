@@ -30,4 +30,6 @@
     <string name="mc">MC</string>
     <string name="labelMemoria">Mem: </string>
     <string name="memoria">0.0</string>
+    <string name="clear">Clear</string>
+    <string name="backspace">Backspace</string>
 </resources>
