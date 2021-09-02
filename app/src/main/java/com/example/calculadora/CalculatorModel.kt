@@ -96,4 +96,7 @@ class CalculatorModel {
         memory = newMemory
         return memory
     }
+    fun resetMemory() {
+        memory = 0.0
+    }
 }
