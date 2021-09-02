@@ -301,6 +301,7 @@
         android:backgroundTint="#333"
         android:backgroundTintMode="add"
         android:fontFamily="monospace"
+        android:onClick="memMinus"
         android:paddingStart="0dp"
         android:paddingTop="2dp"
         android:paddingEnd="0dp"

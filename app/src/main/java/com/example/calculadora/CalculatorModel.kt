@@ -91,4 +91,9 @@ class CalculatorModel {
         memory = newMemory
         return memory
     }
+    fun memMinus(number: Double): Double {
+        val newMemory = memory - number
+        memory = newMemory
+        return memory
+    }
 }
