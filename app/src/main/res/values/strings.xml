@@ -23,4 +23,11 @@
     <string name="inverse">1/x</string>
     <string name="Tpow">10^x</string>
     <string name="pow">x^n</string>
+    <string name="store">Store</string>
+    <string name="recall">Recall</string>
+    <string name="memplus">Mem +</string>
+    <string name="memminus">Mem -</string>
+    <string name="mc">MC</string>
+    <string name="labelMemoria">Mem: </string>
+    <string name="memoria">0.0</string>
 </resources>

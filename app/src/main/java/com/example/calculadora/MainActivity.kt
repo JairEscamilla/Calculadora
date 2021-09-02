@@ -103,4 +103,13 @@ class MainActivity : AppCompatActivity() {
         val result = calculator.calculateTPow(number)
         resultDisplay.text = "$result"
     }
+
+    override fun onStart() {
+        super.onStart()
+        //resultDisplay.text = calculadoraViewModel.resultado
+    }
+    override fun onDestroy() {
+        super.onDestroy()
+        //CalculadoraViewModel.resultado = "Lo que quiero poner en el display"
+    }
 }
