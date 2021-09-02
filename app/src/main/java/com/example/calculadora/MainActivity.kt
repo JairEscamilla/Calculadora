@@ -163,6 +163,20 @@ class MainActivity : AppCompatActivity() {
         operationDisplay.text = ""
         resultDisplay.text = "0.0"
     }
+    @Suppress("UNUSED_PARAMETER")
+    fun backspace(button: View) {
+        try {
+            val number = resultDisplay.text.toString()
+            val newNumber = number.substring(0, number.length - 1)
+            if(newNumber.length === 0)
+                resultDisplay.text = "0.0"
+            else
+                resultDisplay.text = "$newNumber"
+        }catch(e: Exception){
+            resultDisplay.text = "0.0"
+        }
+
+    }
     override fun onStart() {
         super.onStart()
         //resultDisplay.text = calculadoraViewModel.resultado

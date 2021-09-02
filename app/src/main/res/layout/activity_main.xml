@@ -278,7 +278,7 @@
         android:backgroundTint="@color/design_default_color_error"
         android:backgroundTintMode="add"
         android:fontFamily="monospace"
-        android:onClick="store"
+        android:onClick="backspace"
         android:paddingStart="0dp"
         android:paddingTop="2dp"
         android:paddingEnd="0dp"
