@@ -137,6 +137,13 @@ class MainActivity : AppCompatActivity() {
 
     }
 
+    @Suppress("UNUSED_PARAMETER")
+    fun memPlus(button: View) {
+        val number = resultDisplay.text.toString().toDouble()
+        val memory = calculator.memPlus(number)
+        memDisplay.text = "$memory"
+    }
+
     override fun onStart() {
         super.onStart()
         //resultDisplay.text = calculadoraViewModel.resultado
