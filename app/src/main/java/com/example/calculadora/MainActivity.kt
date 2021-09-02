@@ -11,6 +11,7 @@ import java.lang.Exception
 class MainActivity : AppCompatActivity() {
     private lateinit var resultDisplay: TextView
     private lateinit var operationDisplay: TextView
+    private lateinit var memDisplay: TextView
     private val calculator = CalculatorModel()
     private val calculadoraViewModel: CalculadoraViewModel by lazy {
         ViewModelProvider(this).get(CalculadoraViewModel::class.java)
@@ -21,6 +22,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
         resultDisplay = findViewById(R.id.resultDisplay)
         operationDisplay = findViewById(R.id.operationDisplay)
+        memDisplay = findViewById(R.id.memoria)
     }
 
     fun addNumberToDisplay(button: View) {
@@ -102,6 +104,13 @@ class MainActivity : AppCompatActivity() {
         val number = resultDisplay.text.toString().toDouble()
         val result = calculator.calculateTPow(number)
         resultDisplay.text = "$result"
+    }
+
+    @Suppress("UNUSED_PARAMETER")
+    fun store(button: View) {
+        val number = resultDisplay.text.toString().toDouble()
+        calculator.setMemory(number)
+        memDisplay.text = "$number"
     }
 
     override fun onStart() {

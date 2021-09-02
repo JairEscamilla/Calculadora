@@ -10,6 +10,7 @@ class CalculatorModel {
     private var secondNumber = 0.0
     private var operation = ""
     private var result = 0.0
+    private var memory = 0.0
 
     fun setFirstNumber(number: Double) {
         firstNumber = number
@@ -76,5 +77,9 @@ class CalculatorModel {
     }
     fun calculateTPow(number: Double): Double {
         return Math.pow(10.0, number)
+    }
+
+    fun setMemory(number: Double) {
+        memory = number
     }
 }
