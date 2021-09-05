@@ -9,9 +9,9 @@
 
     <Button
         android:id="@+id/button0"
-        android:layout_width="109dp"
+        android:layout_width="240dp"
         android:layout_height="61dp"
-        android:layout_marginBottom="4dp"
+        android:layout_marginBottom="5dp"
         android:width="80dp"
         android:backgroundTint="#212638"
         android:backgroundTintMode="add"
@@ -27,35 +27,9 @@
         android:typeface="monospace"
         app:cornerRadius="25dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/piButton"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:ignore="DuplicateSpeakableTextCheck,UsingOnClickInXml" />
-
-    <Button
-        android:id="@+id/piButton"
-        android:layout_width="109dp"
-        android:layout_height="61dp"
-        android:layout_marginBottom="4dp"
-        android:width="80dp"
-        android:backgroundTint="#212638"
-        android:backgroundTintMode="add"
-        android:fontFamily="monospace"
-        android:onClick="addNumberToDisplay"
-        android:paddingStart="20dp"
-        android:paddingTop="7dp"
-        android:paddingEnd="20dp"
-        android:paddingBottom="7dp"
-        android:text="@string/pi"
-        android:textAlignment="center"
-        android:textSize="25sp"
-        android:typeface="monospace"
-        app:cornerRadius="25dp"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/dot"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/button0"
-        app:layout_constraintTop_toTopOf="@+id/button0"
+        app:layout_constraintStart_toStartOf="parent"
         tools:ignore="DuplicateSpeakableTextCheck,UsingOnClickInXml" />
 
     <Button
@@ -767,8 +741,8 @@
         app:cornerRadius="25dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/piButton"
-        app:layout_constraintTop_toTopOf="@+id/piButton"
+        app:layout_constraintStart_toEndOf="@+id/button0"
+        app:layout_constraintTop_toTopOf="@+id/button0"
         tools:ignore="UsingOnClickInXml" />
 
     <TextView

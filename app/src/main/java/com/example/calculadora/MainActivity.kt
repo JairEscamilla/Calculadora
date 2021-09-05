@@ -1,6 +1,7 @@
 package com.example.calculadora
 
 import android.os.Bundle
+import android.util.Log
 import android.view.View
 import android.widget.Button
 import android.widget.TextView
@@ -26,7 +27,11 @@ class MainActivity : AppCompatActivity() {
     }
 
     fun addNumberToDisplay(button: View) {
-        val number = (button as Button ).text.toString()
+        var number = (button as Button ).text.toString()
+        if(number == "π"){
+            number = "3.1416"
+        }
+
         val displayValue = operationDisplay.text.toString()
         val newDisplayValue = displayValue + number
         operationDisplay.text = newDisplayValue
