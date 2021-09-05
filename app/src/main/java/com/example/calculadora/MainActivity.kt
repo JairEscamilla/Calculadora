@@ -15,6 +15,7 @@ class MainActivity : AppCompatActivity() {
     private lateinit var operationDisplay: TextView
     private lateinit var memDisplay: TextView
     private val calculator = CalculatorModel()
+    private lateinit var modeDisplay: TextView
     private val calculadoraViewModel: CalculadoraViewModel by lazy {
         ViewModelProvider(this).get(CalculadoraViewModel::class.java)
     }
@@ -25,6 +26,7 @@ class MainActivity : AppCompatActivity() {
         resultDisplay = findViewById(R.id.resultDisplay)
         operationDisplay = findViewById(R.id.operationDisplay)
         memDisplay = findViewById(R.id.memoria)
+        modeDisplay = findViewById(R.id.mode)
     }
 
     fun addNumberToDisplay(button: View) {
@@ -186,6 +188,7 @@ class MainActivity : AppCompatActivity() {
     @Suppress("UNUSED_PARAMETER")
     fun degrad(button: View) {
         val mode = calculator.changeMode()
+        modeDisplay.text = "$mode"
         Toast.makeText(applicationContext, "Cambio a $mode", Toast.LENGTH_SHORT).show()
     }
     override fun onStart() {
