@@ -291,10 +291,33 @@
         android:textSize="16sp"
         android:typeface="monospace"
         app:cornerRadius="15dp"
-        app:layout_constraintBottom_toTopOf="@+id/recall"
+        app:layout_constraintBottom_toTopOf="@+id/Store"
         app:layout_constraintEnd_toStartOf="@+id/backspace"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/degrad"
+        android:layout_width="115dp"
+        android:layout_height="58dp"
+        android:width="80dp"
+        android:backgroundTint="@color/design_default_color_error"
+        android:backgroundTintMode="add"
+        android:fontFamily="monospace"
+        android:onClick="degrad"
+        android:paddingStart="0dp"
+        android:paddingTop="2dp"
+        android:paddingEnd="0dp"
+        android:paddingBottom="2dp"
+        android:text="@string/degrad"
+        android:textAlignment="center"
+        android:textSize="16sp"
+        android:typeface="monospace"
+        app:cornerRadius="15dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/backspace"
+        app:layout_constraintTop_toTopOf="@+id/backspace" />
 
     <Button
         android:id="@+id/backspace"
@@ -314,7 +337,7 @@
         android:textSize="16sp"
         android:typeface="monospace"
         app:cornerRadius="15dp"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/degrad"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/clear"
         app:layout_constraintTop_toTopOf="@+id/clear" />

@@ -5,6 +5,7 @@ import android.util.Log
 import android.view.View
 import android.widget.Button
 import android.widget.TextView
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.ViewModelProvider
 import java.lang.Exception
@@ -181,6 +182,10 @@ class MainActivity : AppCompatActivity() {
             resultDisplay.text = "0.0"
         }
 
+    }
+    @Suppress("UNUSED_PARAMETER")
+    fun degrad(button: View) {
+        Toast.makeText(applicationContext, "Cambio a Grados", Toast.LENGTH_SHORT).show()
     }
     override fun onStart() {
         super.onStart()
