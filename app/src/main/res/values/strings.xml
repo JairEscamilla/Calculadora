@@ -34,6 +34,4 @@
     <string name="backspace">Backspace</string>
     <string name="pi">π</string>
     <string name="degrad">DEG/RAD</string>
-    <string name="mode">mode:</string>
-    <string name="radianes">radianes</string>
 </resources>
