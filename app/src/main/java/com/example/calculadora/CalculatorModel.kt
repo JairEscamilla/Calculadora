@@ -11,6 +11,7 @@ class CalculatorModel {
     private var operation = ""
     private var result = 0.0
     private var memory = 0.0
+    private var mode = "radianes"
 
     fun setFirstNumber(number: Double) {
         firstNumber = number
@@ -61,11 +62,11 @@ class CalculatorModel {
     }
 
     fun calculateSin(number: Double): Double {
-        return sin(number)
+        return sin(getArgument(number))
     }
 
     fun calculateCos(number: Double): Double {
-        return cos(number)
+        return cos(getArgument(number))
     }
 
     fun calculateSqrt(number: Double): Double {
@@ -105,5 +106,18 @@ class CalculatorModel {
         operation = ""
         result = 0.0
         memory = 0.0
+    }
+    fun getArgument(angle: Double): Double {
+        if(mode == "grados")
+            return Math.toRadians(angle)
+        return angle
+    }
+    fun changeMode(): String {
+        if(mode == "grados")
+            mode = "radianes"
+        else
+            mode = "grados"
+
+        return mode
     }
 }

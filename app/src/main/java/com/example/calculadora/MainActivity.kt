@@ -185,7 +185,8 @@ class MainActivity : AppCompatActivity() {
     }
     @Suppress("UNUSED_PARAMETER")
     fun degrad(button: View) {
-        Toast.makeText(applicationContext, "Cambio a Grados", Toast.LENGTH_SHORT).show()
+        val mode = calculator.changeMode()
+        Toast.makeText(applicationContext, "Cambio a $mode", Toast.LENGTH_SHORT).show()
     }
     override fun onStart() {
         super.onStart()
