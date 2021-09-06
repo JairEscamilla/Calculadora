@@ -1,7 +1,6 @@
 package com.example.calculadora
 
 import android.os.Bundle
-import android.util.Log
 import android.view.View
 import android.widget.Button
 import android.widget.TextView
@@ -184,7 +183,7 @@ class MainActivity : AppCompatActivity() {
                 toString().split(calculator.getOperation()).toTypedArray()
                 if(calculator.getOperation() == ""){
                     calculator.setFirstNumber(newNumber.toDouble())
-                    operationDisplay.text="$newNumber"
+                    operationDisplay.text=newNumber
                 }else{
                     calculator.setSecondNumber(newNumber.toDouble())
                     operationDisplay.text = "${splittedDisplay[0]}${calculator.getOperation()}$newNumber"
@@ -192,7 +191,6 @@ class MainActivity : AppCompatActivity() {
             }catch (e: Exception) {
                 Toast.makeText(applicationContext, "Ocurrio un error", Toast.LENGTH_SHORT).show()
             }
-            Log.d("BUG", newNumber)
             if(newNumber.isEmpty())
                 resultDisplay.text = "0.0"
             else
