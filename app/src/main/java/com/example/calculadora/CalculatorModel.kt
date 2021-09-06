@@ -1,6 +1,7 @@
 package com.example.calculadora
 
 import android.util.Log
+import android.widget.TextView
 import java.lang.Exception
 import java.lang.Math.cos
 import java.lang.Math.sin
@@ -15,6 +16,14 @@ class CalculatorModel {
 
     fun setFirstNumber(number: Double) {
         firstNumber = number
+    }
+
+    fun setMode(nmode: String) {
+        mode = nmode
+    }
+
+    fun setResult(number: Double) {
+        result = number
     }
 
     fun setSecondNumber(number: Double) {
@@ -35,6 +44,9 @@ class CalculatorModel {
 
     fun getOperation(): String {
         return operation
+    }
+    fun getMode(): String {
+        return mode
     }
     private fun calculateResult() {
         when(operation) {

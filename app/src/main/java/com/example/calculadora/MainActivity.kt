@@ -193,10 +193,31 @@ class MainActivity : AppCompatActivity() {
     }
     override fun onStart() {
         super.onStart()
+        calculator.setFirstNumber(calculadoraViewModel.getFirstNumber())
+        calculator.setSecondNumber(calculadoraViewModel.getSecondNumber())
+        calculator.setMemory(calculadoraViewModel.getMemory())
+        calculator.setMode(calculadoraViewModel.getMode())
+        calculator.setOperation(calculadoraViewModel.getOperation())
+        calculator.setResult(calculadoraViewModel.getResult())
+        memDisplay.text = calculadoraViewModel.getMemDisplay()
+        modeDisplay.text = calculadoraViewModel.getMemDisplay()
+        resultDisplay.text = calculadoraViewModel.getResultDisply()
+        operationDisplay.text = calculadoraViewModel.getOperationDisplay()
+        Log.d("Porfa funciona", resultDisplay.text.toString())
         //resultDisplay.text = calculadoraViewModel.resultado
     }
     override fun onDestroy() {
         super.onDestroy()
+        calculadoraViewModel.setFirstNumber(calculator.getFirstNumber())
+        calculadoraViewModel.setSecondNumber(calculator.getSecondNumber())
+        calculadoraViewModel.setMemory(calculator.getMemory())
+        calculadoraViewModel.setMode(calculator.getMode())
+        calculadoraViewModel.setOperation(calculator.getOperation())
+        calculadoraViewModel.setResult(calculator.getResult())
+        calculadoraViewModel.setMemDisplay(memDisplay.text.toString())
+        calculadoraViewModel.setModeDisplay(modeDisplay.text.toString())
+        calculadoraViewModel.setResultDisplay(resultDisplay.text.toString())
+        calculadoraViewModel.setOperationDisplay(operationDisplay.text.toString())
         //CalculadoraViewModel.resultado = "Lo que quiero poner en el display"
     }
 }
