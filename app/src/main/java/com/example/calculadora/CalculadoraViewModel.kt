@@ -1,6 +1,5 @@
 package com.example.calculadora
 import android.util.Log
-import android.widget.TextView
 import androidx.lifecycle.ViewModel
 
 private const val TAG="CalculadoraViewModel"
@@ -23,6 +22,7 @@ class CalculadoraViewModel: ViewModel() {
         super.onCleared()
         Log.d(TAG, "Instancia destruida")
     }
+    // Getters y setters
     fun setFirstNumber(number: Double) {
         firstNumber = number
     }
@@ -81,9 +81,6 @@ class CalculadoraViewModel: ViewModel() {
     }
     fun setMemDisplay(text: String) {
         memDisplay = text
-    }
-    fun getModeDisplay(): String {
-        return modeDisplay
     }
     fun setModeDisplay(text: String){
         modeDisplay = text
