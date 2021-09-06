@@ -177,6 +177,22 @@ class MainActivity : AppCompatActivity() {
         try {
             val number = resultDisplay.text.toString()
             val newNumber = number.substring(0, number.length - 1)
+            calculator.setResult(newNumber.toDouble())
+
+            try {
+                val splittedDisplay = operationDisplay.text.
+                toString().split(calculator.getOperation()).toTypedArray()
+                if(calculator.getOperation() == ""){
+                    calculator.setFirstNumber(newNumber.toDouble())
+                    operationDisplay.text="$newNumber"
+                }else{
+                    calculator.setSecondNumber(newNumber.toDouble())
+                    operationDisplay.text = "${splittedDisplay[0]}${calculator.getOperation()}$newNumber"
+                }
+            }catch (e: Exception) {
+                Toast.makeText(applicationContext, "Ocurrio un error", Toast.LENGTH_SHORT).show()
+            }
+            Log.d("BUG", newNumber)
             if(newNumber.isEmpty())
                 resultDisplay.text = "0.0"
             else
@@ -204,8 +220,6 @@ class MainActivity : AppCompatActivity() {
         modeDisplay.text = calculadoraViewModel.getMemDisplay()
         resultDisplay.text = calculadoraViewModel.getResultDisply()
         operationDisplay.text = calculadoraViewModel.getOperationDisplay()
-        Log.d("Porfa funciona", resultDisplay.text.toString())
-        //resultDisplay.text = calculadoraViewModel.resultado
     }
     override fun onDestroy() { // Al destruir la pantalla, seteo al viewmodel los respectivos valores
         super.onDestroy()
@@ -219,6 +233,5 @@ class MainActivity : AppCompatActivity() {
         calculadoraViewModel.setModeDisplay(modeDisplay.text.toString())
         calculadoraViewModel.setResultDisplay(resultDisplay.text.toString())
         calculadoraViewModel.setOperationDisplay(operationDisplay.text.toString())
-        //CalculadoraViewModel.resultado = "Lo que quiero poner en el display"
     }
 }

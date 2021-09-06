@@ -271,7 +271,8 @@
         app:layout_constraintBottom_toTopOf="@+id/inverse"
         app:layout_constraintEnd_toStartOf="@+id/recall"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="UsingOnClickInXml" />
 
     <Button
         android:id="@+id/clear"
@@ -294,7 +295,8 @@
         app:layout_constraintBottom_toTopOf="@+id/Store"
         app:layout_constraintEnd_toStartOf="@+id/backspace"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="UsingOnClickInXml" />
 
     <Button
         android:id="@+id/degrad"
@@ -317,7 +319,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/backspace"
-        app:layout_constraintTop_toTopOf="@+id/backspace" />
+        app:layout_constraintTop_toTopOf="@+id/backspace"
+        tools:ignore="UsingOnClickInXml" />
 
     <Button
         android:id="@+id/backspace"
@@ -340,7 +343,8 @@
         app:layout_constraintEnd_toStartOf="@+id/degrad"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/clear"
-        app:layout_constraintTop_toTopOf="@+id/clear" />
+        app:layout_constraintTop_toTopOf="@+id/clear"
+        tools:ignore="UsingOnClickInXml" />
 
     <Button
         android:id="@+id/recall"
@@ -363,7 +367,8 @@
         app:layout_constraintEnd_toStartOf="@+id/memplus"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/Store"
-        app:layout_constraintTop_toTopOf="@+id/Store" />
+        app:layout_constraintTop_toTopOf="@+id/Store"
+        tools:ignore="UsingOnClickInXml" />
 
     <Button
         android:id="@+id/memplus"
@@ -386,7 +391,8 @@
         app:layout_constraintEnd_toStartOf="@+id/memm"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/recall"
-        app:layout_constraintTop_toTopOf="@+id/recall" />
+        app:layout_constraintTop_toTopOf="@+id/recall"
+        tools:ignore="UsingOnClickInXml" />
 
     <Button
         android:id="@+id/memm"
@@ -409,7 +415,8 @@
         app:layout_constraintEnd_toStartOf="@+id/mc"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/memplus"
-        app:layout_constraintTop_toTopOf="@+id/memplus" />
+        app:layout_constraintTop_toTopOf="@+id/memplus"
+        tools:ignore="UsingOnClickInXml" />
 
     <Button
         android:id="@+id/mc"
@@ -432,7 +439,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/memm"
-        app:layout_constraintTop_toTopOf="@+id/memm" />
+        app:layout_constraintTop_toTopOf="@+id/memm"
+        tools:ignore="UsingOnClickInXml" />
 
     <Button
         android:id="@+id/tpow"

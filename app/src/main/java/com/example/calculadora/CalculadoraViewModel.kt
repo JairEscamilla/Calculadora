@@ -10,7 +10,7 @@ class CalculadoraViewModel: ViewModel() {
     private var result = 0.0
     private var memory = 0.0
     private var mode = "radianes"
-    private var resultDisplay = ""
+    private var resultDisplay = "0"
     private var operationDisplay = ""
     private var memDisplay = "0"
     private var modeDisplay = "radianes"
